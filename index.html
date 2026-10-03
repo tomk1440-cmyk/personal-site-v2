@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ME!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="text nav">
+    <h1 style="padding-top: 15%; font-size: 2rem; ">Hi, my name is Tomáš Konopásek</h1>
+    <h2>I am currently: <span id="age"></span> years old.</h2>
+</div>
+<nav class="nav-container">
+    <a class="btn" href="me.html">About me!</a>
+    <a class="btn" href="hobbies.html">My hobbies!</a>
+</nav>
+<div class="text nav">
+    <h2 style="padding-top: 5%; font-size: 2rem; ">My experience:</h2>
+    <h2>Intermediate in C#</h2>
+    <h2>Intermediate in Html</h2>
+    <h2>Intermediate in Css</h2>
+    <h2>Beginner in Javascript</h2>
+    <h2>I have built websites like <a href="https://trikulicky.slashosting.cloud">Autumn Happiness</a></h2>
+    <h2>I am on:</h2>
+    <a href="https://stardance.hackclub.com/@potipek/projects"><img src="icons/stardance.avif" alt="Stardance" width="500px"></a>
+    <br>
+    <a  href="https://github.com/tomk1440-cmyk"><img src="icons/github.png" alt="Github" width="500px" style="background-color: grey"></a>
+    <br>
+    <br>
+    <a  href="https://www.instagram.com/_potipek_/"><img src="icons/instagram.webp" alt="instagram" width="55px"></a>
+    <a href="https://www.tiktok.com/@potipekcz"><img  src="icons/tiktok.png" alt="tiktok" width="55px"></a>
+    <a href="https://www.youtube.com/@CZGlixie"><img  src="icons/youtube.png" alt="youtube" width="55px"></a>
+
+
+</div>
+<button class="btn back-to-top btn-totop" onclick="gototop()">
+    Back to top!
+</button>
+<p class="copyright">
+    © 2026 Personal site V2 by SlasHosting. All rights reserved.
+</p>
+<div class="slashosting">
+    <p>Powered by:</p>
+    <a href="https://www.slashosting.com"><img  src="icons/slashosting.png" alt="SlasHosting" width="250px"></a>
+</div>
+
+<script>
+    const bday = new Date("2012-04-16T05:00:00");
+    function updateAge() {
+        const now = new Date();
+        const age = (now - bday) / (1000 * 60 * 60 * 24 * 365.2425);
+        document.getElementById("age").innerHTML = age.toFixed(2);
+    }
+    updateAge();
+    setInterval(updateAge, 0.1);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
